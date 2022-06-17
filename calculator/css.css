@@ -1,0 +1,91 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10 px;
+    padding-left: 55px;
+}
+
+p {
+    font-size: 15px;
+    margin-left: 3px;
+    padding-left: 1px;
+}
+
+#calculator {
+    background-color: darkkhaki;
+    border: 1px solid black;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 30px;
+    width: 190px;
+    color: #000;
+    font-weight: bold;
+
+    
+}
+
+#number1, #number2, #operator {
+    background-color: #fff;
+    border: 1px solid black;
+    color: black;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 4px;
+    margin-top: 10px;
+    width: 180px;
+
+}
+
+#first, #second, #third {
+  
+    color: black;
+
+    
+}
+
+#button {
+    background-color: red;
+    border: 1px solid black;
+    color: black;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 2px;
+    width: 170px;
+    height: 50px;
+    margin: 8px;
+
+}
+
+#button :hover {
+    background-color: #fff;
+    color: red;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 5px;
+    width: 170px;
+    height: 50px;
+    margin: 5px;
+
+}
+
+#result{
+    background-color: #fff;
+    border: 1px solid black;
+    color: black;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px;
+    width: 170px;
+    height: 50px;
+    margin: 8px;
+}
