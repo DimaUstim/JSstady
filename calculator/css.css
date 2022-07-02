@@ -1,15 +1,94 @@
 body {
-    background-color: #f0f0f0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #000;
+    
+}
+
+.wrapper1{
+    display: flex;
+    
+}
+
+/*First task*/
+
+#first-task {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left:300px;
+    margin-top:350px;
 
 }
 
-h1 {
+#first-button {
+    background-color: red;
+    border: 1px solid black;
+    color: black;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    width: 170px;
+    height: 50px;
+    margin-top: 400px;
+    margin-left: -132px;
+
+}
+
+#first-button:hover { 
+    border: 1px solid white;
+ }
+
+
+/*Second task*/
+
+#second-task {
     font-size: 20px;
     font-weight: bold;
-    margin-left: 10 px;
-    padding-left: 55px;
+    margin-left:800px;
+    margin-top:-100px;
+
+}
+
+#second-button.green {
+    background-color: green;
+    border: 1px solid black;
+    color: white;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    width: 170px;
+    height: 50px;
+    margin-left:-145px;
+    margin-top: -47px;
+ }
+
+#second-button {
+    background-color: red;
+    border: 1px solid black;
+    color: black;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    width: 170px;
+    height: 50px;
+    margin-left:-145px;
+    margin-top: -47px;
+    
+}
+
+#second-button:hover { 
+    border: 1px solid white;
+ }
+
+
+/*Third task*/
+
+ h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left:1400px;
+    margin-top:-260px;
 }
 
 p {
@@ -27,7 +106,8 @@ p {
     width: 190px;
     color: #000;
     font-weight: bold;
-
+    margin-left:-180px;
+    margin-top: -200px;
     
 }
 
@@ -47,7 +127,6 @@ p {
 #first, #second, #third {
   
     color: black;
-
     
 }
 
@@ -56,28 +135,25 @@ p {
     border: 1px solid black;
     color: black;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 30px;
     padding: 2px;
-    width: 170px;
+    width: 70px;
     height: 50px;
-    margin: 8px;
+    margin-left: 60px;
+    margin-top: 10px;
 
 }
 
-#button :hover {
-    background-color: #fff;
-    color: red;
-    border: 1px solid black;
-    border-radius: 10px;
-    font-size: 18px;
-    padding: 5px;
-    width: 170px;
-    height: 50px;
-    margin: 5px;
+#button:hover { 
+    border: 1px solid white;
+ } 
 
+#button:focus { 
+    background-color:green;
 }
 
 #result{
+    display:flex;
     background-color: #fff;
     border: 1px solid black;
     color: black;
@@ -85,7 +161,9 @@ p {
     font-size: 13px;
     font-weight: bold;
     padding: 5px;
-    width: 170px;
-    height: 50px;
-    margin: 8px;
+    width: 175px;
+    height: 15px;
+    margin-left: -2px;
+    margin-top: 12px;
 }
+
