@@ -17,8 +17,15 @@ const addItem = (item) => {
    
 //validation - check on the number of elements in the parent element
 if ($ul.children.length >= 10) { 
+    //disabled button
+    const $button = document.querySelector('button');
+    $button.disabled = true;
     return addError('Items limit is 10 users!');
 }
+
+
+
+
 
 const $li = document.createElement('li');
 $li.innerText = item;
