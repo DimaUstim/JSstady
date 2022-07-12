@@ -3,12 +3,12 @@ const list = [
   "Alex",
   "Oleg",
   "Olena",
-  "Alex",
-  "Oleg",
-  "Olena",
-  "Alex",
-  "Oleg",
-  "Olena"
+  "Alexandra",
+  "Serg",
+  "Ivan",
+  "Ira",
+  "Irina",
+  "Kate",
 ];
 // mockup end
 
@@ -31,10 +31,27 @@ const errorCheck = () => {
   $small.innerHTML = "";
 };
 
+//check item uniqueness
+const checkUniqItem = (item) => {
+  const $liList = document.querySelectorAll("li");
+  for (let index = 0; index < $liList.length; index++) {
+    const $li = $liList[index];
+    if ($li.innerText === item) {
+      addError('"' + item + '" is already in the list');
+      return true;
+    }
+  }
+  return false;
+};
+
 const $button = document.querySelector("button");
 
 const addItem = (item) => {
-  //validation - check on the number of elements in the parent element
+//check item uniqueness
+  if (checkUniqItem(item)) {
+    return;
+  }
+//validation - check on the number of elements in the parent element
   if ($ul.children.length >= 10) {
   //disabled button
     $button.disabled = true;
@@ -44,6 +61,7 @@ const addItem = (item) => {
   const $li = document.createElement("li");
   $li.innerText = item;
   $ul.appendChild($li);
+
 
   $li.addEventListener("click", (event) => {
     removeItem(event.target);
@@ -55,6 +73,7 @@ const addItem = (item) => {
 list.forEach((el, index) => {
   addItem(el);
 });
+
 
 // FORM PATH
 const $form = document.querySelector("form#user");
