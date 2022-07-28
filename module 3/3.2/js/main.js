@@ -93,12 +93,12 @@ window.addEventListener("load", () => {
   loaderSpace.classList.add("d-none");
 });
 
-const resize_ob = new ResizeObserver(function (entries) {
+const resizeObj = new ResizeObserver(function (entries) {
   if (entries[0].contentRect.height > 0) {
-    const loaderPag = document.querySelector(".pagclass");
-    loaderPag.classList.remove("d-none");
+    const loaderPage = document.querySelector(".pagclass");
+    loaderPage.classList.remove("d-none");
   }
 });
 
 // start observing for resize
-resize_ob.observe(document.querySelector("#people_list"));
+resizeObj.observe(document.querySelector("#people_list"));
