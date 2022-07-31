@@ -103,8 +103,7 @@ const resizeObj = new ResizeObserver(function (entries) {
 // start observing for resize
 resizeObj.observe(document.querySelector("#people_list"));
 
-
-//Filter for name and birth year
+// //Filter for name and birth year
 function nameFilter() {
   let input = document.getElementById("myInput");
   let filter = input.value.toUpperCase();
