@@ -1,4 +1,5 @@
 const link = "https://swapi.dev/api/people/?page=1";
+const loaderPage = document.querySelector(".pagclass");
 
 const $ul = document.querySelector("#people_list");
 const loaderSpace = document.querySelector(".spinner");
@@ -25,6 +26,7 @@ const showItems = (data) => {
   data.results.forEach((person) => {
     addPersonItem(person);
   });
+  
 };
 
 const paginatorMaker = (res) => {
@@ -69,16 +71,28 @@ const paginatorMaker = (res) => {
   currentMinus.firstChild.innerText = currentPageNumber - 1;
   currentPlus.firstChild.innerText = currentPageNumber + 1;
 
+  const hideLoaderItem = () => {
+    myFilter.classList.add("d-none");
+    $ul.classList.add("d-none");
+    loaderPage.classList.add("d-none");
+    loaderSpace.classList.remove("d-none");
+  }
+
   nextClass.firstChild.onclick = () => {
+    hideLoaderItem();
     request(res.next);
   };
   previousClass.firstChild.onclick = () => {
+    hideLoaderItem();
     request(res.previous);
   };
   currentMinus.firstChild.onclick = () => {
+    hideLoaderItem();
     request(`${link}&page=${currentPageNumber - 1}`);
+    
   };
   currentPlus.firstChild.onclick = () => {
+    hideLoaderItem();
     request(`${link}&page=${currentPageNumber + 1}`);
   };
 };
@@ -116,6 +130,7 @@ class Swapi {
     showItems(data);
     paginatorMaker(data);
     loaderSpace.classList.add("d-none");
+    $ul.classList.remove("d-none");
   }
 }
 
@@ -127,7 +142,6 @@ const request = swapiApi.request;
 
 const resizeObj = new ResizeObserver(function (entries) {
   if (entries[0].contentRect.height > 0) {
-    const loaderPage = document.querySelector(".pagclass");
     loaderPage.classList.remove("d-none");
     myFilter.classList.remove("d-none");
   }
